@@ -20,7 +20,7 @@ SECRET_KEY = env.str("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG")
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS")
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -33,14 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ckeditor',
-    'product',
-    'order_deliver',
-    'product_promotion',
+    'Product',
     'accounts',
-    'main',
-    'bootstrap4',
     'rest_framework',
-    'corsheaders',
     ]
 
 MIDDLEWARE = [
@@ -54,7 +49,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'MIS.urls'
+ROOT_URLCONF = 'TOS_MIS.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'MIS.wsgi.application'
+WSGI_APPLICATION = 'TOS_MIS.wsgi.application'
 
 
 # Database
