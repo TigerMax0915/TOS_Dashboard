@@ -1,3 +1,6 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Supplier
+ 
+@admin.register(Supplier)
+class SupplierAdmin(admin.ModelAdmin):
+    list_display = ['name', 'representative', 'business_registration', 'email', 'phone_number', 'notes' ]

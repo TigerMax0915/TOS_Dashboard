@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'Product',
     'accounts',
     'rest_framework',
+    'promotionsAndvouchers',
     ]
 
 MIDDLEWARE = [
